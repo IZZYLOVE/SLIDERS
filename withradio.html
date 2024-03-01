@@ -69,6 +69,8 @@
     function showSlide(index) {
         const slider = document.querySelector('.slider');
         currentSlide = index;
+        // Add transition with ease-in-out effect
+        slider.style.transition = 'transform 1.0s ease-in-out';
         slider.style.transform = `translateX(${-currentSlide * 100}%)`;
     }
 </script>
