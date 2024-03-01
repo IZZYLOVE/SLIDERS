@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <figure class="logo">
+        <img  src="./imgs/car19.jpg" alt="logo">
+    </figure>
+    <nav class="min-w-72">
+    <ul class="flex justify-between ">
+        <li><a class="mynav" href="index.html">Home</a></li>
+        <li><a class="mynav active"  href="infinit.html">Infinit</a></li>
+        <li><a class="mynav"  href="withradio.html">Radio</a></li>
+        <li><a class="mynav" href="withradio_infinit.html">Infinit_radio</a></li>
+    </ul>
+</nav>
+</header>
+<main class="slider-container">
+    <div class="slider">
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car17.jpg" alt="Image 1"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car18.jpg" alt="Image 2"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car19.jpg" alt="Image 3"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car10.jpg" alt="Image 4"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car11.jpg" alt="Image 5"></div>
+    </div>
+    <div class="text text-with-shadow" onclick="nextSlide()">TEXT</div>
+    <div class="prev" onclick="prevSlide()">&#10094;</div>
+    <div class="next" onclick="nextSlide()">&#10095;</div>
+</main>
+<footer>
+    <p>&copy; 2024 Website Name. All rights reserved.</p>
+</footer>
+
+<!-- <script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        currentSlide = (index + slides.length) % slides.length;
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+    </script> -->
+
+    <!-- <script>
+        let currentSlide = 0;
+        let direction = 1; // 1 for forward, -1 for backward
+    
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (index + slides.length) % slides.length;
+            slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+    
+        function changeSlide() {
+            const slides = document.querySelectorAll('.slide'); // Define slides here
+            currentSlide += direction;
+    
+            // Check if it's the last slide
+            if (currentSlide === slides.length - 1) {
+                direction = -1; // Reverse direction
+            } else if (currentSlide === 0) {
+                direction = 1; // Go forward if at the first slide
+            }
+    
+            showSlide(currentSlide);
+        }
+    
+        function nextSlide() {
+            direction = 1;
+            changeSlide();
+        }
+    
+        function prevSlide() {
+            direction = -1;
+            changeSlide();
+        }
+    
+        // Automatically transition to the next slide every 3 seconds
+        setInterval(() => {
+            changeSlide();
+        }, 3000);
+    </script> -->
+
+    <script>
+        let currentSlide = 0;
+        let direction = 1; // 1 for forward, -1 for backward
+    
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (index + slides.length) % slides.length;
+    
+            // Add transition with ease-in-out effect
+            slider.style.transition = 'transform 1.0s ease-in-out';
+            slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    
+            // Reset transition property after the animation
+            setTimeout(() => {
+                slider.style.transition = '';
+            }, 500);
+        }
+    
+        function changeSlide() {
+            const slides = document.querySelectorAll('.slide'); // Define slides here
+            currentSlide += direction;
+    
+            // Check if it's the last slide
+            if (currentSlide === slides.length - 1) {
+                direction = -1; // Reverse direction
+            } else if (currentSlide === 0) {
+                direction = 1; // Go forward if at the first slide
+            }
+    
+            showSlide(currentSlide);
+        }
+    
+        function nextSlide() {
+            direction = 1;
+            changeSlide();
+        }
+    
+        function prevSlide() {
+            direction = -1;
+            changeSlide();
+        }
+    
+        // Automatically transition to the next slide every 3 seconds
+        setInterval(() => {
+            changeSlide();
+        }, 5000);
+    </script>
+    
+    
+</body>
+</html>

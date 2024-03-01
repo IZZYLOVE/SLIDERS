@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Slider with Radio Buttons</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img  src="./imgs/car19.jpg" alt="logo">
+        </figure>
+        <nav class="min-w-72">
+        <ul class="flex justify-between ">
+            <li><a class="mynav" href="index.html">Home</a></li>
+            <li><a class="mynav"  href="infinit.html">Infinit</a></li>
+            <li><a class="mynav active"  href="withradio.html">Radio</a></li>
+            <li><a class="mynav" href="withradio_infinit.html">Infinit_radio</a></li>
+        </ul>
+    </nav>
+    </header>
+<main class="slider-container-radio">
+    <div class="slider">
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car17.jpg" alt="Image 1"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car18.jpg" alt="Image 2"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car19.jpg" alt="Image 3"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car10.jpg" alt="Image 4"></div>
+        <div class="slide"><img onclick="nextSlide()" src="./imgs/car11.jpg" alt="Image 5"></div>
+    </div>
+
+    <div class="text2 text-with-shadow" >TEXT</div>
+
+    <div class="radio-container_parent">
+        <div class="radio-container">
+            <input type="radio" id="radio1" name="slider" checked>
+            <label for="radio1" class="radio-label"></label>
+        
+            <input type="radio" id="radio2" name="slider">
+            <label for="radio2" class="radio-label"></label>
+        
+            <input type="radio" id="radio3" name="slider">
+            <label for="radio3" class="radio-label"></label>
+
+            <input type="radio" id="radio4" name="slider">
+            <label for="radio4" class="radio-label"></label>
+
+            <input type="radio" id="radio5" name="slider">
+            <label for="radio5" class="radio-label"></label>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Website Name. All rights reserved.</p>
+</footer>
+
+
+<script>
+    document.querySelectorAll('input[type="radio"]').forEach((radio, index) => {
+        radio.addEventListener('change', () => showSlide(index));
+    });
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slider = document.querySelector('.slider');
+        currentSlide = index;
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+</script>
+</body>
+</html>
