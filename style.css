@@ -12,7 +12,20 @@ a{
     color: #f7f3f3;
 }
 
+
+.headerSection1, footer{
+    background-color: #272424;
+    color: #f7f3f3;
+    padding: 10px;
+    text-align: center;
+}
+
 header{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerSection1{
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -21,13 +34,6 @@ header{
     align-items: center;
     top: 0;
     
-}
-
-header, footer{
-    background-color: #272424;
-    color: #f7f3f3;
-    padding: 10px;
-    text-align: center;
 }
 
 footer{
@@ -48,9 +54,8 @@ footer{
 }
 
 nav{
-    min-width: 350px;
+    min-width: 250px;
     margin: 10px;
-
 }
 
 nav ul{
@@ -92,7 +97,8 @@ body {
 .slider-container-radio {
     width: 100%;
     max-width: 1400px ;
-    margin: auto;
+    margin:  68px auto auto auto;
+
     overflow: hidden;
     position: relative;
 
@@ -141,7 +147,13 @@ img {
     /* background-color: beige; */
     color: #f7f3f3;
     top: 50%;
+}
 
+.text3{
+    color: #f7f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-with-shadow {
@@ -207,3 +219,38 @@ input[type="radio"] {
 input[type="radio"]:checked + .radio-label {
     background-color: #555;
 }
+
+/* BACKGROUNDS */
+
+.dim {
+    width: 100%;
+    height: 100%;
+    /* aspect-ratio:16/9;  */
+    aspect-ratio:19/9;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.element1 {
+    background-image: url('./imgs/car20.jpg');
+    background-attachment: fixed;  
+}
+
+.element2 {
+    background-image: url('./imgs/car15.jpg');
+    background-attachment: scroll;  
+}
+
+.element3 {
+    background-image: url('./imgs/car16.jpg');
+    background-attachment: fixed;  
+}
+
+.element4 {
+    background-image: url('./imgs/car13.jpg');
+    background-attachment: scroll;  
+}
+

@@ -8,51 +8,71 @@
 </head>
 <body>
     <header>
-        <figure class="logo">
-            <img  src="./imgs/car19.jpg" alt="logo">
-        </figure>
-        <nav class="min-w-72">
-        <ul class="flex justify-between ">
-            <li><a class="mynav" href="index.html">Home</a></li>
-            <li><a class="mynav"  href="infinit.html">Infinit</a></li>
-            <li><a class="mynav"  href="withradio.html">Radio</a></li>
-            <li><a class="mynav active" href="withradio_infinit.html">Infinit_radio</a></li>
-        </ul>
-    </nav>
+        <section class="headerSection1">
+            <figure class="logo">
+                <img  src="./imgs/car19.jpg" alt="logo">
+            </figure>
+            <nav class="">
+                <ul class="flex justify-between ">
+                    <li><a class="mynav" href="index.html">Home</a></li>
+                    <li><a class="mynav"  href="infinit.html">Infinit</a></li>
+                    <li><a class="mynav"  href="withradio.html">Radio</a></li>
+                    <li><a class="mynav active" href="withradio_infinit.html">R-Infinit</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="slider-container-radio">
+            <div class="slider">
+                <div class="slide"><img onclick="nextSlide()" src="./imgs/car17.jpg" alt="Image 1"></div>
+                <div class="slide"><img onclick="nextSlide()" src="./imgs/car18.jpg" alt="Image 2"></div>
+                <div class="slide"><img onclick="nextSlide()" src="./imgs/car19.jpg" alt="Image 3"></div>
+                <div class="slide"><img onclick="nextSlide()" src="./imgs/car10.jpg" alt="Image 4"></div>
+                <div class="slide"><img onclick="nextSlide()" src="./imgs/car11.jpg" alt="Image 5"></div>
+            </div>
+        
+            <div class="text2 text-with-shadow" >TEXT</div>
+        
+            <div class="radio-container_parent">
+                <div class="radio-container">
+                    <input type="radio" id="radio1" name="slider" checked>
+                    <label for="radio1" class="radio-label"></label>
+                
+                    <input type="radio" id="radio2" name="slider">
+                    <label for="radio2" class="radio-label"></label>
+                
+                    <input type="radio" id="radio3" name="slider">
+                    <label for="radio3" class="radio-label"></label>
+        
+                    <input type="radio" id="radio4" name="slider">
+                    <label for="radio4" class="radio-label"></label>
+        
+                    <input type="radio" id="radio5" name="slider">
+                    <label for="radio5" class="radio-label"></label>
+                </div>
+            </div>
+        </section>
     </header>
-<main class="slider-container-radio ">
-    <div class="slider">
-        <div class="slide"><img onclick="nextSlide()" src="./imgs/car17.jpg" alt="Image 1"></div>
-        <div class="slide"><img onclick="nextSlide()" src="./imgs/car18.jpg" alt="Image 2"></div>
-        <div class="slide"><img onclick="nextSlide()" src="./imgs/car19.jpg" alt="Image 3"></div>
-        <div class="slide"><img onclick="nextSlide()" src="./imgs/car10.jpg" alt="Image 4"></div>
-        <div class="slide"><img onclick="nextSlide()" src="./imgs/car11.jpg" alt="Image 5"></div>
-    </div>
-
-    <div class="text2 text-with-shadow" >TEXT</div>
-
-    <div class="radio-container_parent">
-        <div class="radio-container">
-            <input type="radio" id="radio1" name="slider" checked>
-            <label for="radio1" class="radio-label"></label>
+    <main>
+        <section class="dim element1 text3 text-with-shadow">
+          CONTENT GOES HERE
+        </section>
+      
+        <section class="dim element2 text3 text-with-shadow">
+          CONTENT GOES HERE
+        </section>
+      
+        <section class="dim element3 text3 text-with-shadow">
+          CONTENT GOES HERE
+        </section>
+      
         
-            <input type="radio" id="radio2" name="slider">
-            <label for="radio2" class="radio-label"></label>
-        
-            <input type="radio" id="radio3" name="slider">
-            <label for="radio3" class="radio-label"></label>
-
-            <input type="radio" id="radio4" name="slider">
-            <label for="radio4" class="radio-label"></label>
-
-            <input type="radio" id="radio5" name="slider">
-            <label for="radio5" class="radio-label"></label>
-        </div>
-    </div>
-</main>
-<footer>
-    <p>&copy; 2024 Website Name. All rights reserved.</p>
-</footer>
+        <section class="dim element4 text3 text-with-shadow">
+          CONTENT GOES HERE
+        </section>
+      </main>
+      <footer>
+          <p>&copy; 2024 Website Name. All rights reserved.</p>
+      </footer>
 
 
 
